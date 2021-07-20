@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My motorcycle</title>
+  </head>
+  <body>
+    <div id="allRegister">
+      <video src="/image/register/bbb.mp4" muted loop autoplay></video>
+      <div class="register">
+        <h1>הרשמה למערכת</h1>
+        <h2>הכנס שם מלא</h2>
+        <input id="firstName" type="text" placeholder="שם פרטי" />
+        <input id="lastName" type="text" placeholder="שם משפחה" />
+        <h2>בחר אזור מגורים</h2>
+        <select id="city">
+          <option value="" selected disabled>בחר אזור עיר</option>
+          <option value="Kiryat Shmona, IL">קרית שמונה</option>
+          <option value="Nahariya, IL">נהריה</option>
+          <option value="Teverya, IL">טבריה</option>
+          <option value="Haifa, IL">חיפה</option>
+          <option value="Tel Aviv, IL">תל אביב</option>
+          <option value="Jerusalem, IL">ירושלים</option>
+          <option value="‘En Boqeq, IL">עין בוקק</option>
+          <option value="Beersheba, IL">באר שבע</option>
+          <option value="Mitzpe Ramon, IL">מצפה רמון</option>
+          <option value="Eilat, IL">אילת</option>
+        </select>
+        <h2>בחר דגם אופנוע</h2>
+        <select id="manufacturer">
+          <option value="" selected disabled>בחר יצרן</option>
+          <option value="honda">HONDA</option>
+          <option value="ktm">KTM</option>
+          <option value="beta">Beta</option>
+          <option value="suzuki">Suzuki</option>
+        </select>
+        <select id="subManufacturer">
+          <option value="" selected disabled>בחר דגם</option>
+        </select>
+        <h2>הכנס תאריך עליה לכביש</h2>
+        <input id="dateRoad" type="Date" />
+        <h2>הכנס מס' רישוי</h2>
+        <input id="modelNumber" type="text" />
+        <h2>בחר סוג מד אוץ</h2>
+        <input type="radio" name="selected" id="km" value="קילומטר" />קילומטר
+        <input type="radio" name="selected" id="hs" value="שעות מנוע" />שעות
+        מנוע
+        <h2>הכנס מס' קילומטר/שעות מנוע</h2>
+        <input id="utz" type="text" />
+        <button id="addData">הרשם</button>
+      </div>
+    </div>
+    <div id="main">
+      <div id="header">
+        <h1 id="walcome"></h1>
+        <button id="deleteUser" onclick="deleteUser()">מחיקת משתמש</button>
+      </div>
+      <div id="userDetails">
+        <h1>האופנוע שלי</h1>
+        <h2 id="fName"></h2>
+        <h2 id="cName"></h2>
+        <h2 id="mName"></h2>
+        <h2 id="dRoad"></h2>
+        <h2 id="model"></h2>
+        <h2 id="mUtz"></h2>
+        <img id="myMoto">
+      </div>
+      <div id="futureTreatment">
+        <h1 id="Titletrea">הטיפולים הקרובים</h1>
+        <h2 id="kmTreatment">הטיפול יבוצע ב: </h2>
+        <h2 id="typeTreatment">פרטי הטיפול: </h2>
+        <button id="doneTr">בוצע טיפול</button>
+        <div id="freeWriteTrea">
+          <h1>טיפולים יזומים</h1>
+          <textarea
+            id="freeWriteTreatment"
+            placeholder='הכנס טיפולים יזומים כגון החלפת מצבר וכ"ו'
+          ></textarea>
+          <button id="saveFree">שמור</button>
+        </div>
+        <h1 id="nextTestTitel">הטסט הקרוב</h1>
+        <h2 id="nextTest"></h2>
+      </div>
+      <div id="weather">
+        <div id="owrArea">
+          <h1 id="titleCity">תחזית מזג האוויר</h1>
+        </div>
+        <div id="cityWeather">
+        </div>
+        <div id="otherArea"> 
+          <label>בחר אזור אחר לצפייה</label>
+          <select id="otherCity">
+            <option value="" selected disabled>בחר אזור עיר</option>
+            <option value="Kiryat Shmona, IL">קרית שמונה</option>
+            <option value="Nahariya, IL">נהריה</option>
+            <option value="Teverya, IL">טבריה</option>
+            <option value="Haifa, IL">חיפה</option>
+            <option value="Tel Aviv, IL">תל אביב</option>
+            <option value="Jerusalem, IL">ירושלים</option>
+            <option value="‘En Boqeq, IL">עין בוקק</option>
+            <option value="Beersheba, IL">באר שבע</option>
+            <option value="Mitzpe Ramon, IL">מצפה רמון</option>
+            <option value="Eilat, IL">אילת</option>
+          </select>
+        </div>
+        <div id="otherCityWeather" >
+          <img id="otherCityImage" />
+        </div>
+      </div>
+      <div id="presentTreatment">
+
+        <div id="historyTreatment">
+          <h1>היסטורית טיפולים שגרתית</h1>
+        </div>
+        <div id="freeTreatment">
+          <h1>היסטורית טיפולים יזומה</h1>
+        </div>
+      </div>
+    </div>
+    <div id="bar">
+     <h3>
+       © Created by: Itamar Amit and Aharon Yerushalmi
+     </h3>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
