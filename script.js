@@ -1,4 +1,5 @@
 let conJsonToObj = "";
+
 function onload() {
   let check = localStorage.getItem("userData");
   conJsonToObj = JSON.parse(check);
@@ -16,6 +17,7 @@ function onload() {
 }
 
 let otherCity = document.querySelector("#otherCity");
+
 otherCity.addEventListener("change", (event) => {
   otherCityWeather.innerHTML = "";
   cWeather(event.target.value, "otherCityWeather");
@@ -24,6 +26,7 @@ otherCity.addEventListener("change", (event) => {
 let cityChoice = "";
 let cityChoiceHe = "";
 let city = document.querySelector("#city");
+
 city.addEventListener("change", (event) => {
   cityChoice = event.target.value;
   cityChoiceHe = city.options[city.selectedIndex].text;
@@ -62,13 +65,12 @@ lastName.addEventListener("keyup", (event) => {
   oString(event,lastName);
 });
 
-function oString(event,someText){
+function oString(event,someText) {
   let temp = event.target.value
   let len = event.target.value.length-1
     if (temp[len]<'א' || temp[len]>'ת') {
         alert("הכנס אותיות בלבד")
         someText.value = temp.slice(0,len)
-        // lastName.value = temp.slice(0,len)
     }
 }
 
