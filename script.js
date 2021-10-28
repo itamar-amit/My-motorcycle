@@ -4,7 +4,7 @@ function onload() {
   conJsonToObj = JSON.parse(check);
   if (check == null) {
     main.style.display = "none";
-    bar.style.display = "none";
+    // bar.style.display = "none";
   } else {
     allRegister.style.display = "none";
     writeData(conJsonToObj);

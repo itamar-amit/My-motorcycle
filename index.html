@@ -44,11 +44,12 @@
         <input id="dateRoad" type="Date" />
         <h2>הכנס מס' רישוי</h2>
         <input id="modelNumber" type="text" />
-        <h2>בחר סוג מד אוץ</h2>
-        <input type="radio" name="selected" id="km" value="קילומטר" />קילומטר
-        <input type="radio" name="selected" id="hs" value="שעות מנוע" />שעות
-        מנוע
-        <h2>הכנס מס' קילומטר/שעות מנוע</h2>
+        <div>
+          <h2>בחר סוג מד אוץ</h2>
+          <input type="radio" name="selected" id="km" value="קילומטר" />קילומטר
+          <input type="radio" name="selected" id="hs" value="שעות מנוע" />שעות
+        </div>
+        <h2>הכנס מס' קילו'/ש"מ</h2>
         <input id="utz" type="text" />
         <button id="addData">הרשם</button>
       </div>
@@ -111,7 +112,6 @@
         </div>
       </div>
       <div id="presentTreatment">
-
         <div id="historyTreatment">
           <h1>היסטורית טיפולים שגרתית</h1>
         </div>
@@ -121,10 +121,8 @@
       </div>
     </div>
     <div id="bar">
-     <h3>
-       © Created by: Itamar Amit and Aharon Yerushalmi
-     </h3>
-    </div>
+      <h3>© Created by: Itamar Amit and Aharon Yerushalmi</h3>
+     </div>
     <script src="script.js"></script>
   </body>
 </html>
